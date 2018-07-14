@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Kollektif';
+  src: url('font/Kollektif.ttf');
+}
+body {
+	font-family: Kollektif,'Raleway', sans-serif;
+	background-color: #D9D9D9;
+}
+.row {
+	width: 100%;
+	display: flex;
+}
+.col-half {
+	width:50%;
+	display: inline-block;
+	flex: 1;
+	padding: 5px;
+}
+.col-third {
+	width:30%;
+	display: inline-block;
+	flex: 1;
+	padding: 5px;
+}
+.col-quarter {
+	width:22%;
+	display: inline-block;
+	flex: 1;
+	padding: 5px;
+	text-align: center;
+}
+h1 {
+	color: #646464;
+}
+ul {
+ 	list-style-type: none;
+ }
+#titleSection {
+	height:50%;
+}
+.icons {
+	float: right;
+}
+.contactImg {
+	width: 5%;
+	height: auto;
+	vertical-align: middle;
+}
+footer, .contact {
+	color: #646464;
+}
+.blurbWords {
+	text-align: right;
+	color: #4F6EFB;
+}
+.enigma {
+	width: 200px;
+	height: auto;
+}
+.poster {
+	width: 200px;
+	height: auto;
+}
