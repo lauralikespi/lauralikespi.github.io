@@ -4,96 +4,119 @@
 
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/main.css"/>
         <link type="text/css" rel="stylesheet" href="css/flocking-main.css"/>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </head>
 
     <body>
-
-        <div class="row">
-            <div class="left">
-                <h1> Flocking Simulation </h1>
+        <div class="row" id="titleSection">
+            <div class="left-half">
+                <h1 class="titleText"> lauralikespi </h1>
             </div>
-            <div class="right">
-
+            <div class="right-half right-text">	
+                <h1> &#x3A0; </h1>
+                <!-- <img class="icons" src="img/icons.png" alt="several colourful graphics including laptop, microphone, pencil"/>			 -->
             </div>
-            
+        </div>
+
+        <div class="row line">
+
         </div>
         <div class="row">
-            <div class="graph">    
-                <br/>
-                <div id="flockingSim"></div>
-                <table>
-                    <tr>
-                        <th> Number of Boids: </th>
-                        <th> Radius: </th>
-                        <th> Velocity: </th>
-                        <th> Cohesion: </th>
-                        <th> Separation: </th> 
-                        <th> Alignment: </th>
-                    <tr>
-                    <tr>
-                        <td id="boidsOutput"> </td>
-                        <td id="radiusOutput"> </td>
-                        <td id="velOutput"> </td>
-                        <td id="cohOutput"> </td>
-                        <td id="sepOutput"> </td>
-                        <td id="aliOutput"> </td>
-                    </tr>
-                </table>
-
+            <div class="sidenav">
+                <ul class="nav">
+                    <li> <a href="index.html">About</a></li>
+                    <li> <a href="projects.html">Projects</a></li>
+                    <li> <a href="http://www.taughtbyhumans.com">taught by humans</a></li>
+                    <li> <a href="#">Contact</a></li>
+                </ul>
             </div>
-            <div class="control"> 
-                <div class="row"> 
-                    <div class="left">  
-                        <h3> Control Panel </h3>
-                    </div>
-                    <div class="right">
-                        <!-- Rounded switch -->
-                        <!-- <ul> -->
-                            
-                            <!-- <li> 
-                                <label class="switch">
-                                    <input id="nightmode" type="checkbox">
-                                    <span class="toggle round"></span>
-                                </label>
-                            </li> -->
-                            <!-- <li>   <button id="nightmode" onclick="nightmode()"> Nightmode </button></li> -->
-                        <!-- </ul> --> 
-                    </div>
-                </div>
+            <div class="right-big" id="main">
                 <div class="row">
-                    <div class="left">
+                    <div class="left-small">
+                        <h1> Flocking Simulation </h1>
+                    </div>
+                    <div class="middle-small">
                         <button id="start" onclick="startSim()"> Start </button>
                         <button id="stop" onclick="stopSim()"> Stop </button>
                         <button id="restart" onclick="restartSim()"> Restart </button>
-                    </div>    
-                    <div class="right">    
-                        <p id="updateNeeded"> </p>
                     </div>
-                </div>
-                <div class="options">
-                    <h3> Options </h3>
-                    <p> Number of boids: </p>
-                    <input type="range" min="10" max="2000" value="100" step="10" class="slider" id="boids">
+                    <div class="right">
 
-                    <p>Radius of neighbourhood: </p>
-                    <input type="range" min="10" max="1280" value="100" step="10" class="slider" id="radius">               
-                    
-                    <p>Velocity: </p>
-                    <input type="range" min="0" max="200" value="100" step="10" class="slider" id="velocity">  
+                        <table>
+                            <tr>
+                                <th> Number of Boids: </th>
+                                <th> Radius: </th>
+                                <th> Velocity: </th>
+                                <th> Cohesion: </th>
+                                <th> Separation: </th> 
+                                <th> Alignment: </th>
+                            <tr>
+                            <tr>
+                                <td id="boidsOutput"> </td>
+                                <td id="radiusOutput"> </td>
+                                <td id="velOutput"> </td>
+                                <td id="cohOutput"> </td>
+                                <td id="sepOutput"> </td>
+                                <td id="aliOutput"> </td>
+                            </tr>
+                        </table>
+                    </div>
+                
+                 </div>
+                <div class="row">
+                    <div class="graph">    
+                        <br/>
+                        <div id="flockingSim"></div>
 
-                    <p>Cohesion: </p>
-                    <input type="range" min="0" max="2" value="1.00" step="0.1" class="slider" id="cohesion">  
 
-                    <p>Separation</p>
-                    <input type="range" min="0" max="2" value="1.00" step="0.1" class="slider" id="separation">  
+                    </div>
+                    <div class="control"> 
+                        <!-- <div class="row"> 
+                            <div class="left">  
+                                <h3> Control Panel </h3>
+                            </div>
+                            <div class="right">
 
-                    <p>Alignment: </p>
-                    <input type="range" min="0" max="2" value="1.00" step="0.1" class="slider" id="alignment">
+                            </div>
+                        </div> -->
+                        <div class="row">
+                            <div class="left">
+
+                            </div>    
+                            <div class="right">    
+                                <p id="updateNeeded"> </p>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <h3> Options </h3>
+                            <p> Number of boids: </p>
+                            <input type="range" min="10" max="2000" value="100" step="10" class="slider" id="boids">
+
+                            <p>Radius of neighbourhood: </p>
+                            <input type="range" min="10" max="1280" value="100" step="10" class="slider" id="radius">               
+                            
+                            <p>Velocity: </p>
+                            <input type="range" min="0" max="200" value="100" step="10" class="slider" id="velocity">  
+
+                            <p>Cohesion: </p>
+                            <input type="range" min="0" max="2" value="1.00" step="0.1" class="slider" id="cohesion">  
+
+                            <p>Separation</p>
+                            <input type="range" min="0" max="2" value="1.00" step="0.1" class="slider" id="separation">  
+
+                            <p>Alignment: </p>
+                            <input type="range" min="0" max="2" value="1.00" step="0.1" class="slider" id="alignment">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <footer>
+            <p>made by lauralikespi 2019 </p>
+        </footer>
         <script src="js/test.js"></script>
     </body>
 

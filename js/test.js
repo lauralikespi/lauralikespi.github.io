@@ -224,7 +224,14 @@ function updatePlot(boids,n,h,w){
         y: plotBoids(n)[1],
         mode: 'markers',
         type: 'scatter' }], {
-        margin: { t: 0 },
+        margin: {
+            l: 0,
+            r: 0,
+            b: 0,
+            t: 0,
+            pad: 4
+            },
+        plot_bgcolor : '#E6E6FA',
         xaxis: {
             range: [-w, w],
             showgrid: false,
@@ -253,7 +260,15 @@ Plotly.plot( graph, [{
     y: plotBoids(n)[1],
     mode: 'markers',
     type: 'scatter' }], {
-    margin: { t: 0 },
+    margin: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0,
+        pad: 4
+        },
+    displayModeBar: false,
+    plot_bgcolor : '#E6E6FA',
     xaxis: {
         range: [-w, w],
         showgrid: false,

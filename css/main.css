@@ -3,61 +3,98 @@
   src: url('font/Kollektif.ttf');
 }
 body {
-	font-family: Kollektif,'Raleway', sans-serif;
-	background-color: #D9D9D9;
+	font-family: 'Roboto', sans-serif;
 }
 .row {
 	width: 100%;
 	display: flex;
 }
-.col-half {
+.left-half {
 	width:50%;
 	display: inline-block;
 	flex: 1;
-	padding: 5px;
+	float: left;
 }
-.col-third {
-	width:30%;
+.right-half {
+	width:50%;
 	display: inline-block;
 	flex: 1;
-	padding: 5px;
-}
-.col-quarter {
-	width:22%;
-	display: inline-block;
-	flex: 1;
-	padding: 5px;
-	text-align: center;
-}
-h1 {
-	color: #646464;
-}
-ul {
- 	list-style-type: none;
- }
-#titleSection {
-	height:50%;
-}
-.icons {
 	float: right;
 }
-.contactImg {
-	width: 5%;
-	height: auto;
-	vertical-align: middle;
+.left-small {
+	width:10%;
+	display: inline-block;
+	flex: 1;
+	float: center;
 }
-footer, .contact {
+.right-small {
+	width:10%;
+	display: inline-block;
+	flex: 1;
+	float: right;
+}
+.right-text {
+	text-align: right;
+}
+.line {
+	background-color: grey;
+	height: 5px;
+}
+h1 {
+	font-family: Kollektif,'Raleway', sans-serif;
 	color: #646464;
 }
-.blurbWords {
-	text-align: right;
-	color: #4F6EFB;
+footer {
+	color: #646464;
+	text-align: center;
 }
-.enigma {
-	width: 200px;
+/* The side navigation menu */
+.sidenav {
+	width: 10%;
+	height: 80%;
+	background-color: #20B2AA;
+	float: right;
+	text-align: center;
+	/* border-right: 5px solid grey; */
+}
+.right-big {
+	width: 90%;
+	background-color: #E6E6FA;
+	/* display:flex;
+	align-items:center;
+	justify-content:center;
+	text-align: center; */
+}
+.img-about {
+	text-align: center;
+}
+ul {
+	list-style-type: none;
+	padding: 0px
+}
+li {
+	text-decoration: none;
+	padding: 20px 0px 20px 0px;
+}
+a {
+	text-decoration: none;
+	color: #E6E6FA;
+}
+img {
+	width: 50%;
 	height: auto;
-}
-.poster {
-	width: 200px;
+  }
+.rounded {
+	width: 50%;
 	height: auto;
-}
+	border-radius: 50%;
+  }
+  .otherAnchor {
+	color: #20B2AA;
+  }
+  .homepageText {
+	  padding-top: 10%;
+  }
+  table {
+	  width: 100%;
+  }
