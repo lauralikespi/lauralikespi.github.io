@@ -36,9 +36,6 @@ for (i = 0 ; i < n ; i++){
     boids[i] = new Boid();
 }
 
-
-
-
 function plotBoids(n){
     var x_plot = [];
     var y_plot = [];
@@ -82,9 +79,7 @@ function cohesion(agent,neighbours){
 }
 
 function separation(agent,neighbours,boids,sep_cof){
-    // weight_sep = document.getElementById("separation").value;
-    // document.getElementById("sepOutput").innerHTML = weight_sep*100 + "%"; 
-    // sep_cof = sep_cof * weight_sep; 
+
     x_sep = 0;
     y_sep = 0;
     count = 0;
@@ -95,12 +90,7 @@ function separation(agent,neighbours,boids,sep_cof){
             y_sep += neighbours[i].y;
             count++
         }
-        // x_sep += boids[agent].x - neighbours[i].x;
-        // y_sep += boids[agent].y - neighbours[i].y;
     }
-    // x_sep = x_sep / num;
-    // y_sep = y_sep / num;
-    // return [x_sep, y_sep];
     if (count > 0){
         x_sep = x_sep / count;
         y_sep = y_sep / count;
@@ -112,17 +102,12 @@ function separation(agent,neighbours,boids,sep_cof){
 }
 
 function alignment(agent,neighbours,boids){
-    // x_ali = 0;
-    // y_ali = 0;
     angle = 0;
     num = neighbours.length; // number of neighbours
-    // x_ali = boids[agent].x / num;
-    // y_ali = boids[agent].y / num;
     for (i = 0 ; i < num ; i++){
         angle += neighbours[i].theta;
     }
     ang_ali = angle / num;
-    // return [x_ali, y_ali];
     return ang_ali;
 }
 
@@ -130,17 +115,9 @@ function updateBoid(agent,boids){
     neighbours = neighbourhood(agent,boids,n);
     
     if (neighbours.length > 0){
-        // var x_coh, y_coh, x_sep, y_sep, x_ali, y_ali = 0;
 
         var mag_coh, ang_coh, mag_sep, ang_sep, ali_ang = 0;
 
-        // x_coh = cohesion(agent,neighbours)[0];
-        // y_coh = cohesion(agent,neighbours)[1];
-        // x_sep = separation(agent,neighbours,boids)[0];
-        // y_sep = separation(agent,neighbours,boids)[1];
-        // x_ali = alignment(agent,neighbours,boids)[0];
-        // y_ali = alignment(agent,neighbours,boids)[1];
-        
         mag_coh = cohesion(agent,neighbours)[0];
         ang_coh = cohesion(agent,neighbours)[1];
         mag_sep = separation(agent,neighbours,boids,sep_cof)[0];
@@ -156,16 +133,9 @@ function updateBoid(agent,boids){
         document.getElementById("aliOutput").innerHTML = Math.round(weight_ali*100) + "%";
         document.getElementById("cohOutput").innerHTML = Math.round(weight_coh*100) + "%"; 
         document.getElementById("velOutput").innerHTML = v;
-        // new_x = boids[agent].x + weight_coh * x_coh + weight_sep * x_sep + weight_ali * x_ali; //+ (Math.round(Math.random()) * 2 - 1) * Math.random();
-        // new_y = boids[agent].y + weight_coh * y_coh + weight_sep * y_sep + weight_ali * y_ali; //+ (Math.round(Math.random()) * 2 - 1) * Math.random(); 
-        
-        
+ 
         new_ang = weight_coh*ang_coh - weight_sep*ang_sep + weight_ali*ang_ali;
-        // max_v = 100;
-        // mag = weight_coh*mag_coh;
-        // if (mag > max_v){
-        //     mag = max_v;
-        // }
+
         new_x = boids[agent].x + v*Math.cos(new_ang);
         new_y = boids[agent].y + v*Math.sin(new_ang);
     
@@ -295,7 +265,6 @@ var updating = window.setInterval(function(){
 var startButton = document.getElementById("start");
 var stopButton = document.getElementById("stop");
 var restartButton = document.getElementById("restart");
-// var nightmodeButton = document.getElementById("nightmode").checked;
 startButton.disabled=true;
 stopButton.disabled=false;
 restartButton.disabled=true;
@@ -320,7 +289,6 @@ var stopSim = function(){
 
 var restartSim = function(){
     console.log("Restart");
-    // window.clearInterval(updating) // clear the timer and so stop the clock
     n = document.getElementById("boids").value; // number of boids
     document.getElementById("boidsOutput").innerHTML = n; 
     document.getElementById("updateNeeded").innerHTML = ""; 
@@ -334,35 +302,3 @@ var restartSim = function(){
     updatePlot(boids,n,h,w)
     startSim()
 }
-
-
-// for (i = 0 ; i < n ; i++ ) {
-//     console.log(i);
-//     console.log(boids[i].x)
-//     console.log(boids[i].y)
-//     neighbours = neighbourhood(i,boids,n);
-//     console.log(neighbours.length)
-// }
-
-
-// boids.forEach(boid => {
-//     agent = boids.indexOf(boid);
-//     console.log(agent);
-//     console.log(boid.x);
-//     console.log(boid.y);
-//     neighbours = neighbourhood(agent,boids,n);
-//     console.log(neighbours.length);
-//     var x_coh, y_coh, x_sep, y_sep, x_ali, y_ali = 0;
-
-//     x_coh = cohesion(agent,neighbours)[0];
-//     y_coh = cohesion(agent,neighbours)[1];
-//     x_sep = separation(agent,neighbours,boids)[0];
-//     y_sep = separation(agent,neighbours,boids)[1];
-//     x_ali = alignment(agent,neighbours,boids)[0];
-//     y_ali = alignment(agent,neighbours,boids)[1];
-
-//     new_x = boids[agent].x + weight_coh * x_coh + weight_sep * x_sep + weight_ali * x_ali;
-//     new_y = boids[agent].y + weight_coh * y_coh + weight_sep * y_sep + weight_ali * y_ali;
-//     console.log(new_x);
-//     console.log(new_y);
-// })
