@@ -51,10 +51,10 @@ footer {
 /* The side navigation menu */
 .sidenav {
 	width: 10%;
-	height: 80%;
 	background-color: #20B2AA;
 	float: right;
 	text-align: center;
+	min-height: 80%;
 	/* border-right: 5px solid grey; */
 }
 .right-big {
