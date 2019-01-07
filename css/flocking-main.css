@@ -47,8 +47,8 @@ button {
   border-radius: 10%;
   background-color: #20B2AA;
   font-weight: bold;
-  color: #663399;
+  color: #E6E6FA;
 }
 button:disabled {
-  color: #E6E6FA;
+  color: grey;
 }
