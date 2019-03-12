@@ -98,3 +98,13 @@ img {
   table {
 	  width: 100%;
   }
+  .imgLogo {
+	align-items: center; 
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 5px;
+  }
+  .logo {
+	  width: 5%;
+	  height: auto;
+  }

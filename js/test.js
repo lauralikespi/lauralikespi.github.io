@@ -36,6 +36,7 @@ for (i = 0 ; i < n ; i++){
     boids[i] = new Boid();
 }
 
+// Make a variable for x and y for plotting
 function plotBoids(n){
     var x_plot = [];
     var y_plot = [];
@@ -45,8 +46,11 @@ function plotBoids(n){
     }
     return [x_plot, y_plot];
 }
+// Is the above function necessary?
 
-
+// Work out the neighbourhood of each boid 
+// I.e. is another boid within a certain distance (r) from that boid
+// Uses Pythagoras theorem
 function neighbourhood(agent,boids,n){
     neighbours = []
     r = document.getElementById("radius").value; 
@@ -59,6 +63,9 @@ function neighbourhood(agent,boids,n){
     return neighbours;
 }
 
+// Work out the magnitude and angle of cohesion
+// Find the average position of all neighbours
+// Use this to compute angle necessary to steer towards this centre
 function cohesion(agent,neighbours){
     x_coh = 0;
     y_coh = 0;
@@ -78,6 +85,8 @@ function cohesion(agent,neighbours){
     return [mag_coh, ang_coh];
 }
 
+// Work out the magnitude and angle of separation
+// 
 function separation(agent,neighbours,boids,sep_cof){
 
     x_sep = 0;
@@ -142,8 +151,8 @@ function updateBoid(agent,boids){
     
     }
     else {
-        new_x = boids[agent].x - v*Math.random(); 
-        new_y = boids[agent].y - v*Math.random(); 
+        new_x = boids[agent].x - v * (Math.round(Math.random()) * 2 - 1) * Math.random(); 
+        new_y = boids[agent].y - v * (Math.round(Math.random()) * 2 - 1) * Math.random(); 
     }
 
     if (new_x > w){
@@ -302,3 +311,8 @@ var restartSim = function(){
     updatePlot(boids,n,h,w)
     startSim()
 }
+
+
+// is separation coefficient correct?
+// should all algorithms be calculated just using neighbours?
+// 

@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie|Thasadith" rel="stylesheet">
+    <title>lauralikespi</title>
+    <link rel="icon" href="img/logo.png" sizes="16x16" type="image/png">
+     <style>
+         html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Thasadith', sans-serif;
+            margin-left: 0;
+         }
+         .handwriting {
+            font-family: 'Reenie Beanie', cursive;
+         }
+         .hidden{
+            display: none;
+         }
+         .row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .row-left {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            min-height: 10vh;
+        }
+        .left-half {
+            width:50%;
+            display: inline-block;
+            flex: 1;
+        }
+        .right-half {
+            width:50%;
+            display: inline-block;
+            flex: 1;
+            float: right;
+        }
+        /* .shapes {
+            height: 50%;
+            width: 100%;
+        } */
+        .row-third {
+            height: 33vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fifth {
+             width: 25%;
+             display: inline-block;
+         }
+         .seventh {
+             width: 14%;
+             height:33%;
+             display: inline-block;
+         }
+         .fourteenth {
+            width: 7%; 
+            display: inline-block;
+         }
+         .eighth {
+             width: 12.5%;
+             display: inline-block;
+         }
+         .two-seventh {
+             width: 28%;
+             display: inline-block;
+         }
+         .three-seventh {
+             width: 42%;
+             display: inline-block;
+         }
+         a {
+            text-decoration: none;
+            color: #E6E6FA;
+        }
+        .titleText {
+            color: grey;
+        }
+        .imgLogo {
+            align-items: center; 
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 5%;
+        }
+        .logo {
+            width: 5%;
+            height: auto;
+        }
+         /* .circle {
+            vertical-align: middle;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: #D3F8E2;
+            animation-name: backgroundChange;
+            animation-duration: 10s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+            margin-left: auto;
+            margin-right: auto;
+        } */
+        .circle {
+            vertical-align: middle;
+            position: relative;
+	        width: 40%;		/* desired width */
+            border-radius: 50%;
+            background-color: #D3F8E2;
+            animation-name: backgroundChange;
+            animation-duration: 10s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .circle:before{
+            content: "";
+            display: block;
+            padding-top: 100%; 	/* initial ratio of 1:1*/
+        }
+        .triangle-up {
+            height: 0;
+            width: 0;
+            border-left: 4vw solid transparent;
+            border-right: 4vw solid transparent;
+            border-bottom: 8vw solid #D3F8E2;
+            animation-name: borderBottomChange;
+            animation-duration: 8s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .triangle-down {
+            height: 0;
+            width: 0;
+            /* background-color: #555;
+            background-color: red; */
+            border-left: 4vw solid transparent;
+            border-right: 4vw solid transparent;
+            border-top: 8vw solid #822E81;
+            animation-name: borderTopChange;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+            margin-left: auto;
+            margin-right: auto;
+        } 
+        /* The animation code */
+        @keyframes backgroundChange {
+            0% {
+                background-color: #D3F8E2;
+            }
+            25% {
+                background-color: #A9DEF9;
+            }
+            50% {
+                background-color: #E4C1F9;
+            }
+            75% {
+                background-color: #F694C1;;
+            }
+            100% {
+                background-color: #F7567C;
+            }
+        }
+
+        @keyframes borderTopChange {
+        /* from {border-top-color: red;}
+        to {border-top-color: yellow;} */
+             0% {
+                border-top-color: #7B506F;
+            }
+            25% {
+                border-top-color: #9F87AF;
+            }
+            50% {
+                border-top-color: #B497D6;
+            }
+            75% {
+                border-top-color: #E87EA1;
+            }
+            100% {
+                border-top-color: #B1DDF1;
+            }
+ 
+    }
+        @keyframes borderBottomChange {
+        /* from {border-bottom-color: red;}
+        to {border-bottom-color: yellow;} */
+            0% {
+                border-bottom-color: #822E81;
+            }
+            25% {
+                border-bottom-color: #440381;
+            }
+            50% {
+                border-bottom-color: #51E5FF;
+            }
+            75% {
+                border-bottom-color: #90FCF9;
+            }
+            100% {
+                border-bottom-color: #DEC5E3;
+            }
+        }
+        .eighth p {
+            text-align: center;
+        }
+        .left {
+            flex: 1;
+            text-align: left;
+        }
+        .fullPage {
+            min-height: 100vh;
+        }
+        /* .line1 {
+            border:1px solid gray;
+            width:100px;
+            height:100px;
+            position:relative;
+        }
+
+        .line1:after {
+            content:"";
+            position:absolute;
+            border-top: 1px solid #DEC5E3;
+            width:141px;
+            transform: rotate(45deg);
+            transform-origin: 0% 0%;
+        } */
+        .one-one {
+            height: 100%;
+            width: 20%;
+            background: #FFAFBD;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            opacity: 0.4;
+        }
+        .one-two {
+            height: 100%;
+            width: 20%;
+        }
+        .reducedTopMargin {
+            margin-top: 0%;
+        }
+        .words {
+            padding-top: 10vh;
+        }
+        .arrow2 {
+            position: relative;
+            margin-left: 150px;
+        }
+
+        .arrow2 .curve2 {
+            border: 1px solid #ffcccc;
+            border-color: #ffcccc transparent transparent transparent;
+            height: 110px;
+            width: 210px;
+            border-radius: 250px 250px 0 0;
+        }
+
+        .arrow2 .point2 {
+            position: absolute;
+            left: 55px;
+            top: 337px;
+        }
+
+        .arrow2 .point2:before, .arrow2 .point2:after {
+            border: 1px solid #ffcccc; /* thickness, etc of arrow head */
+            height: 15px;
+            content: "";
+            position: absolute;
+        }
+
+        /* arrow on left */
+        .arrow2 .point2:before {
+            top: -310px; /* movement in y axis*/
+            left: -20px; /* movement in x axis*/
+            transform:rotate(-74deg); /* angle of arrow */
+            -webkit-transform:rotate(-74deg);
+            -moz-transform:rotate(-74deg);
+            -ms-transform: rotate(-74deg);
+        }
+
+        .arrow2 .point2:after {
+            top: -320px;
+            left: -25px;
+            transform:rotate(12deg);
+            -webkit-transform: rotate(12deg);
+            -moz-transform:rotate(12deg);
+            -ms-transform: rotate(12deg);
+        }
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #about {
+            background-color: #72E1D1;
+            color: #3066BE;
+            padding-left: 1vw;
+        }
+        .faded {
+            color: #6D9DC5;
+        }
+     </style>
+ </head>
+ <body>
+    <div class="fullPage" id="test">
+        <div class="row" id="titleSection">
+            <div class="left-half">
+                <div class="row">
+                    <div class="left-half">
+                        <a href="/"><h1 class="titleText"> lauralikespi </h1></a>
+                    </div>
+                    <div class="right-half">
+                        <div class="overlay">
+                            <div class="arrow2 hidden">
+                                <div class="curve2"></div>
+                                <div class="point2"></div>
+                            </div>
+                        </div>  
+                        <p class="handwriting hidden"> maths is my thing. I have a degree in it! </p>
+                    </div>
+                </div>
+            </div>
+    <!-- 			<div class="col-third">
+                <img class="enigma" src="img/enigma_laura.png" alt="Laura using an engima machine, blackboard with equations in the background"/>				
+            </div> -->
+            <div class="right-half right-text imgLogo">	
+                <img class="logo" src="img/logo.png" alt="Pi symbol, with curvature">
+                <!-- <img class="icons" src="img/icons.png" alt="several colourful graphics including laptop, microphone, pencil"/>			 -->
+            </div>
+        </div>
+
+        <div class="row shapes">
+            <!-- row 1 triange-down, blank, circle, blank, triange up, blank, circle-->
+            <div class="seventh">
+                <div class="triangle-down"></div>
+            </div>
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="circle"></div>
+            </div>
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="triangle-up"></div>
+            </div> 
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="circle"></div>
+            </div>
+        </div>
+            
+            <!-- row 2  blank, triange-up, blank, triange-down, blank, triange-up, blank-->
+        <div class="row shapes">
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="triangle-up"></div>
+            </div>
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="circle"></div>   
+            </div>
+            <div class="seventh">
+                
+            </div> 
+            <div class="seventh">
+                <div class="triangle-down"></div>
+            </div>
+            <div class="seventh">
+                
+            </div>
+        </div>
+        <div class="row shapes">
+            <!-- row 1 triange-down, blank, circle, blank, triange up, blank, circle-->
+            <div class="seventh">
+                <div class="circle"></div>
+            </div>
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="triangle-down"></div>
+            </div>
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="circle"></div>
+            </div>
+            <div class="seventh">
+                
+            </div>
+            <div class="seventh">
+                <div class="triangle-up"></div>
+            </div> 
+
+
+        </div>       
+        <div class="row words">
+            <div class="eighth">
+
+            </div>
+            <div class="eighth">
+                <p> Educator </p>
+            </div>
+            <div class="eighth">
+                <p> Developer </p>
+            </div>
+            <div class="eighth">
+                <p> Data Dork</p>
+            </div>
+            <div class="eighth">
+                <p> Robotics / AI 
+                    <br/>
+                    Researcher</p>
+            </div>
+            <div class="eighth">
+                <p> Innovator </p>
+            </div>
+            <div class="eighth">
+                <div id="hiddenCircle">
+                    <p> Founder </p>
+                </div>
+            </div> 
+            <div class="eighth">
+
+            </div>
+        </div>
+        <div class="row-left">
+            <div class="seventh">
+                <p class="handwriting hidden">
+                    I guess this makes me a multi-hypenate of sorts...
+                </p>
+            </div>
+            <div class="fourteenth">
+
+            </div>
+
+            <div class="two-seventh">
+                <p class="handwriting hidden">
+                    Passionate about using these to make the world a better place
+                </p>
+            </div>    
+            <div class="fourteenth">
+
+            </div>    
+            <div class="seventh">
+                <p class="handwriting hidden">
+                    I am a magpie, I like all things new and shiny
+                </p>
+            </div>
+            <div class="fourteenth">
+
+            </div>
+            <div class="seventh">
+                <p class="handwriting hidden">
+                    I still find it weird adding this...
+                </p>
+            </div> 
+        </div>
+        <button onclick="testScreenSize();">Test</button>
+    </div>
+    <div class="fullPage" id="about">
+        <div class="row">
+            <h2> Hi, I'm Laura<span class="faded">likespi</span>.</h2>
+        </div>
+        <div class="row">
+            <p> I'm a tech and data nerd, who enjoys making, creating writing and teaching.</p>
+        </div>
+        <div class="row">    
+            <div class="fifth">
+                <h2> My skills include: </h2>
+                <p class="handwriting reducedTopMargin  hidden"> (that I like to get paid for)</p>
+            </div>
+            <div class="fifth">
+                <p> Website design and development </p>
+            </div>
+            <div class="fifth">
+                
+            </div>
+            <div class="fifth">
+                <p> Software engineering</p>
+            </div>
+            <div class="fifth">
+              
+            </div>
+        </div>
+        <div class="row">    
+            <div class="fifth">
+                
+            </div>
+            <div class="fifth">
+                <p> Writing and speaking</p>
+            </div>
+            <div class="fifth">
+                <p> Data, reporting and analytics</p>
+            </div>
+            <div class="fifth">
+                <p> Teaching and curriculums </p>
+            </div>
+            <div class="fifth">
+                <p> Emerging tech - IoT, VR/AR, AI, Robotics, Chatbots, voice, etc</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fullPage">
+        <div class="row-third">
+        
+            <div class="one-one">
+                
+            </div>
+        
+            <div class="one-two">
+                
+            </div>
+            <div class="one-one">
+                
+            </div>
+            
+            <div class="one-two">
+                
+            </div> 
+            <div class="one-one">
+                
+            </div>
+        </div>
+        <div class="row-third">
+        
+            <div class="one-two">
+                
+            </div>
+            
+            <div class="one-one">
+                
+            </div>
+            <div class="one-two">
+                
+            </div>
+            
+            <div class="one-one">
+                
+            </div> 
+            <div class="one-two">
+                
+            </div>
+        </div>
+        <div class="row-third">
+    
+            <div class="one-one">
+                
+            </div>
+        
+            <div class="one-two">
+                
+            </div>
+            <div class="one-one">
+                
+            </div>
+            
+            <div class="one-two">
+                
+            </div> 
+            <div class="one-one">
+                
+            </div>
+        </div>       
+    </div>
+    <script src="js/handwriting.js"></script>
+</body>
+</html>
