@@ -330,8 +330,8 @@ to {border-bottom-color: yellow;} */
 		padding: 2%;
 	}
 	.skills li {
-		display: block;
-		width: 100vw;
+		display: inline-block;
+		width: 30vw;
 		padding: 0;
 	}
 	.skills p {
