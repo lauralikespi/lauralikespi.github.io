@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie|Thasadith" rel="stylesheet">
     <title>lauralikespi</title>
     <link rel="icon" href="img/logo.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
      <style>
          html, body {
             width: 100%;
@@ -51,8 +52,16 @@
             align-items: center;
             justify-content: center;
         }
+        .third {
+            width: 33%;
+             display: inline-block;
+        }
         .fifth {
              width: 25%;
+             display: inline-block;
+         }
+         .four-fifth {
+             width: 75%;
              display: inline-block;
          }
          .seventh {
@@ -305,11 +314,26 @@
             left: 0;
         }
         #about {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
             background-color: #72E1D1;
             color: #3066BE;
             padding-left: 1vw;
         }
-        .faded {
+        #about a {
+            color: #3066BE;
+        }
+        #about ul {
+            list-style: none;
+        }
+        #about li{
+           display: inline;
+           padding: 2%;
+           font-size: 1.5em;
+        }
+        #about a:hover, .faded {
             color: #6D9DC5;
         }
      </style>
@@ -486,43 +510,54 @@
             <h2> Hi, I'm Laura<span class="faded">likespi</span>.</h2>
         </div>
         <div class="row">
-            <p> I'm a tech and data nerd, who enjoys making, creating writing and teaching.</p>
+            <h3> I'm a tech and data nerd, who enjoys making, creating, writing and teaching.</h3>
         </div>
         <div class="row">    
             <div class="fifth">
                 <h2> My skills include: </h2>
                 <p class="handwriting reducedTopMargin  hidden"> (that I like to get paid for)</p>
             </div>
-            <div class="fifth">
-                <p> Website design and development </p>
+            <div class="four-fifth">
+                <div class="row">
+                    <div class="third">
+                        <h3> Developer</h3>
+                        <p> Website design and development </p>
+                        <p> Raspberry Pis, Arduinos, electronics, NodeJS, HTML, CSS, Javascript, Python</p>
+                        <p> Emerging tech - IoT, VR/AR, AI, Robotics, Chatbots, voice, etc</p>
+                    </div>
+                    <div class="third">
+                        <h3> Data </h3>
+                        <p> Reporting, dashboards and analytics</p>
+                        <p> Spreadsheets, SQL, R, Python</p>
+                        <p> Data Science and Machine Learning</p>
+                    </div>
+                    <div class="third">
+                        <h3> Educator </h3>
+                        <p> Teaching and designing curriculums</p>
+                        <p> Organising courses and hackathons</p>
+                        <p> Writing and speaking</p>
+                    </div>
+                </div>
             </div>
-            <div class="fifth">
-                
-            </div>
-            <div class="fifth">
-                <p> Software engineering</p>
-            </div>
-            <div class="fifth">
-              
-            </div>
+
         </div>
         <div class="row">    
-            <div class="fifth">
-                
-            </div>
-            <div class="fifth">
-                <p> Writing and speaking</p>
-            </div>
-            <div class="fifth">
-                <p> Data, reporting and analytics</p>
-            </div>
-            <div class="fifth">
-                <p> Teaching and curriculums </p>
-            </div>
-            <div class="fifth">
-                <p> Emerging tech - IoT, VR/AR, AI, Robotics, Chatbots, voice, etc</p>
-            </div>
+            <h3> Currently available for work. Interested in hiring me or collaborating, please contact me <a href="#contact">here</a>.</h3>
         </div>
+        <div class="row"> 
+            <h3> If you want to learn more, keep scrolling for projects, or check out my social media </h3>
+        </div>    
+        <div class="row">
+            <ul class="social">
+                <!-- <li> <a href="contact.html" ><i class="far fa-envelope"></i></a>  </li> -->
+                <li> <a href="https://twitter.com/lauralikespi" target="_blank"> <i class="fab fa-twitter"></i></a>  </li>
+                <li> <a href="https://www.instagram.com/lauralikespi/"target="_blank"> <i class="fab fa-instagram"></i></a>  </li>
+                <!-- ADD MEDIUM -->
+                <!-- ADD LINKEDIN -->
+                <!-- ADD GITHUB -->
+            </ul>
+        </div>
+       
     </div>
 
 
