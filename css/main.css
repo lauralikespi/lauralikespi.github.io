@@ -334,4 +334,7 @@ to {border-bottom-color: yellow;} */
 		width: 100vw;
 		padding: 0;
 	}
+	.skills p {
+		padding-left: 0;
+	}
   }
