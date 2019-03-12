@@ -327,7 +327,7 @@ to {border-bottom-color: yellow;} */
 	}
 	.skills ul {
 		margin: 0;
-		padding: 1vw;
+		padding: 0.5vw;
 	}
 	.skills li {
 		display: inline-block;
