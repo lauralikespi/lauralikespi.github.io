@@ -12,6 +12,7 @@
             height: 100%;
             font-family: 'Thasadith', sans-serif;
             margin-left: 0;
+            -webkit-font-smoothing: antialiased;
          }
          .handwriting {
             font-family: 'Reenie Beanie', cursive;
@@ -40,7 +41,6 @@
             width:50%;
             display: inline-block;
             flex: 1;
-            float: right;
         }
         /* .shapes {
             height: 50%;
@@ -226,9 +226,6 @@
             flex: 1;
             text-align: left;
         }
-        .fullPage {
-            min-height: 100vh;
-        }
         /* .line1 {
             border:1px solid gray;
             width:100px;
@@ -336,292 +333,295 @@
         #about a:hover, .faded {
             color: #6D9DC5;
         }
+
      </style>
  </head>
  <body>
-    <div class="fullPage" id="test">
-        <div class="row" id="titleSection">
-            <div class="left-half">
-                <div class="row">
+    <div class="holster">
+        <div class="container">
+            <div class="fullPage" id="test">
+                <div class="row" id="titleSection">
                     <div class="left-half">
-                        <a href="/"><h1 class="titleText"> lauralikespi </h1></a>
-                    </div>
-                    <div class="right-half">
-                        <div class="overlay">
-                            <div class="arrow2 hidden">
-                                <div class="curve2"></div>
-                                <div class="point2"></div>
+                        <div class="row">
+                            <div class="left-half">
+                                <a href="/"><h1 class="titleText"> lauralikespi </h1></a>
                             </div>
-                        </div>  
-                        <p class="handwriting hidden"> maths is my thing. I have a degree in it! </p>
+                            <div class="right-half">
+                                <div class="overlay">
+                                    <div class="arrow2 hidden">
+                                        <div class="curve2"></div>
+                                        <div class="point2"></div>
+                                    </div>
+                                </div>  
+                                <p class="handwriting hidden"> maths is my thing. I have a degree in it! </p>
+                            </div>
+                        </div>
+                    </div>
+            <!-- 			<div class="col-third">
+                        <img class="enigma" src="img/enigma_laura.png" alt="Laura using an engima machine, blackboard with equations in the background"/>				
+                    </div> -->
+                    <div class="right-half right-text imgLogo">	
+                        <img class="logo" src="img/logo.png" alt="Pi symbol, with curvature">
+                        <!-- <img class="icons" src="img/icons.png" alt="several colourful graphics including laptop, microphone, pencil"/>			 -->
                     </div>
                 </div>
-            </div>
-    <!-- 			<div class="col-third">
-                <img class="enigma" src="img/enigma_laura.png" alt="Laura using an engima machine, blackboard with equations in the background"/>				
-            </div> -->
-            <div class="right-half right-text imgLogo">	
-                <img class="logo" src="img/logo.png" alt="Pi symbol, with curvature">
-                <!-- <img class="icons" src="img/icons.png" alt="several colourful graphics including laptop, microphone, pencil"/>			 -->
-            </div>
-        </div>
 
-        <div class="row shapes">
-            <!-- row 1 triange-down, blank, circle, blank, triange up, blank, circle-->
-            <div class="seventh">
-                <div class="triangle-down"></div>
-            </div>
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="circle"></div>
-            </div>
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="triangle-up"></div>
-            </div> 
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="circle"></div>
-            </div>
-        </div>
-            
-            <!-- row 2  blank, triange-up, blank, triange-down, blank, triange-up, blank-->
-        <div class="row shapes">
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="triangle-up"></div>
-            </div>
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="circle"></div>   
-            </div>
-            <div class="seventh">
-                
-            </div> 
-            <div class="seventh">
-                <div class="triangle-down"></div>
-            </div>
-            <div class="seventh">
-                
-            </div>
-        </div>
-        <div class="row shapes">
-            <!-- row 1 triange-down, blank, circle, blank, triange up, blank, circle-->
-            <div class="seventh">
-                <div class="circle"></div>
-            </div>
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="triangle-down"></div>
-            </div>
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="circle"></div>
-            </div>
-            <div class="seventh">
-                
-            </div>
-            <div class="seventh">
-                <div class="triangle-up"></div>
-            </div> 
-
-
-        </div>       
-        <div class="row words">
-            <div class="eighth">
-
-            </div>
-            <div class="eighth">
-                <p> Educator </p>
-            </div>
-            <div class="eighth">
-                <p> Developer </p>
-            </div>
-            <div class="eighth">
-                <p> Data Dork</p>
-            </div>
-            <div class="eighth">
-                <p> Robotics / AI 
-                    <br/>
-                    Researcher</p>
-            </div>
-            <div class="eighth">
-                <p> Innovator </p>
-            </div>
-            <div class="eighth">
-                <div id="hiddenCircle">
-                    <p> Founder </p>
+                <div class="row shapes">
+                    <!-- row 1 triange-down, blank, circle, blank, triange up, blank, circle-->
+                    <div class="seventh">
+                        <div class="triangle-down"></div>
+                    </div>
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="triangle-up"></div>
+                    </div> 
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="circle"></div>
+                    </div>
                 </div>
-            </div> 
-            <div class="eighth">
+                    
+                    <!-- row 2  blank, triange-up, blank, triange-down, blank, triange-up, blank-->
+                <div class="row shapes">
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="triangle-up"></div>
+                    </div>
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="circle"></div>   
+                    </div>
+                    <div class="seventh">
+                        
+                    </div> 
+                    <div class="seventh">
+                        <div class="triangle-down"></div>
+                    </div>
+                    <div class="seventh">
+                        
+                    </div>
+                </div>
+                <div class="row shapes">
+                    <!-- row 1 triange-down, blank, circle, blank, triange up, blank, circle-->
+                    <div class="seventh">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="triangle-down"></div>
+                    </div>
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="seventh">
+                        
+                    </div>
+                    <div class="seventh">
+                        <div class="triangle-up"></div>
+                    </div> 
 
-            </div>
-        </div>
-        <div class="row-left">
-            <div class="seventh">
-                <p class="handwriting hidden">
-                    I guess this makes me a multi-hypenate of sorts...
-                </p>
-            </div>
-            <div class="fourteenth">
 
-            </div>
+                </div>       
+                <div class="row words">
+                    <div class="eighth">
 
-            <div class="two-seventh">
-                <p class="handwriting hidden">
-                    Passionate about using these to make the world a better place
-                </p>
-            </div>    
-            <div class="fourteenth">
+                    </div>
+                    <div class="eighth">
+                        <p> Educator </p>
+                    </div>
+                    <div class="eighth">
+                        <p> Developer </p>
+                    </div>
+                    <div class="eighth">
+                        <p> Data Dork</p>
+                    </div>
+                    <div class="eighth">
+                        <p> Robotics / AI 
+                            <br/>
+                            Researcher</p>
+                    </div>
+                    <div class="eighth">
+                        <p> Innovator </p>
+                    </div>
+                    <div class="eighth">
+                        <div id="hiddenCircle">
+                            <p> Founder </p>
+                        </div>
+                    </div> 
+                    <div class="eighth">
 
-            </div>    
-            <div class="seventh">
-                <p class="handwriting hidden">
-                    I am a magpie, I like all things new and shiny
-                </p>
-            </div>
-            <div class="fourteenth">
+                    </div>
+                </div>
+                <div class="row-left">
+                    <div class="seventh">
+                        <p class="handwriting hidden">
+                            I guess this makes me a multi-hypenate of sorts...
+                        </p>
+                    </div>
+                    <div class="fourteenth">
 
+                    </div>
+
+                    <div class="two-seventh">
+                        <p class="handwriting hidden">
+                            Passionate about using these to make the world a better place
+                        </p>
+                    </div>    
+                    <div class="fourteenth">
+
+                    </div>    
+                    <div class="seventh">
+                        <p class="handwriting hidden">
+                            I am a magpie, I like all things new and shiny
+                        </p>
+                    </div>
+                    <div class="fourteenth">
+
+                    </div>
+                    <div class="seventh">
+                        <p class="handwriting hidden">
+                            I still find it weird adding this...
+                        </p>
+                    </div> 
+                </div>
+                <button onclick="testScreenSize();">Test</button>
             </div>
-            <div class="seventh">
-                <p class="handwriting hidden">
-                    I still find it weird adding this...
-                </p>
-            </div> 
-        </div>
-        <button onclick="testScreenSize();">Test</button>
-    </div>
-    <div class="fullPage" id="about">
-        <div class="row">
-            <h2> Hi, I'm Laura<span class="faded">likespi</span>.</h2>
-        </div>
-        <div class="row">
-            <h3> I'm a tech and data nerd, who enjoys making, creating, writing and teaching.</h3>
-        </div>
-        <div class="row">    
-            <div class="fifth">
-                <h2> My skills include: </h2>
-                <p class="handwriting reducedTopMargin  hidden"> (that I like to get paid for)</p>
-            </div>
-            <div class="four-fifth">
+            <div class="fullPage" id="about">
                 <div class="row">
-                    <div class="third">
-                        <h3> Developer</h3>
-                        <p> Website design and development </p>
-                        <p> Raspberry Pis, Arduinos, electronics, NodeJS, HTML, CSS, Javascript, Python</p>
-                        <p> Emerging tech - IoT, VR/AR, AI, Robotics, Chatbots, voice, etc</p>
+                    <h2> Hi, I'm Laura<span class="faded">likespi</span>.</h2>
+                </div>
+                <div class="row">
+                    <h3> I'm a tech and data nerd, who enjoys making, creating, writing and teaching.</h3>
+                </div>
+                <div class="row">    
+                    <div class="fifth">
+                        <h2> My skills include: </h2>
+                        <p class="handwriting reducedTopMargin  hidden"> (that I like to get paid for)</p>
                     </div>
-                    <div class="third">
-                        <h3> Data </h3>
-                        <p> Reporting, dashboards and analytics</p>
-                        <p> Spreadsheets, SQL, R, Python</p>
-                        <p> Data Science and Machine Learning</p>
+                    <div class="four-fifth">
+                        <div class="row">
+                            <div class="third">
+                                <h3> Developer</h3>
+                                <p> Website design and development </p>
+                                <p> Raspberry Pis, Arduinos, electronics, NodeJS, HTML, CSS, Javascript, Python</p>
+                                <p> Emerging tech - IoT, VR/AR, AI, Robotics, Chatbots, voice, etc</p>
+                            </div>
+                            <div class="third">
+                                <h3> Data </h3>
+                                <p> Reporting, dashboards and analytics</p>
+                                <p> Spreadsheets, SQL, R, Python</p>
+                                <p> Data Science and Machine Learning</p>
+                            </div>
+                            <div class="third">
+                                <h3> Educator </h3>
+                                <p> Teaching and designing curriculums</p>
+                                <p> Organising courses and hackathons</p>
+                                <p> Writing and speaking</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="third">
-                        <h3> Educator </h3>
-                        <p> Teaching and designing curriculums</p>
-                        <p> Organising courses and hackathons</p>
-                        <p> Writing and speaking</p>
+
+                </div>
+                <div class="row">    
+                    <h3> Currently available for work. Interested in hiring me or collaborating, please contact me <a href="#contact">here</a>.</h3>
+                </div>
+                <div class="row"> 
+                    <h3> If you want to learn more, keep scrolling for projects, or check out my social media </h3>
+                </div>    
+                <div class="row">
+                    <ul class="social">
+                        <!-- <li> <a href="contact.html" ><i class="far fa-envelope"></i></a>  </li> -->
+                        <li> <a href="https://twitter.com/lauralikespi" target="_blank"> <i class="fab fa-twitter"></i></a>  </li>
+                        <li> <a href="https://www.instagram.com/lauralikespi/"target="_blank"> <i class="fab fa-instagram"></i></a>  </li>
+                        <li> <a href="https://medium.com/@lauralikespi_32732"target="_blank"> <i class="fab fa-medium-m"></i></a>  </li>
+                        <li> <a href="https://www.linkedin.com/in/lauragemmell/"target="_blank"> <i class="fab fa-linkedin-in"></i></a>  </li>
+                        <li> <a href="https://github.com/lauralikespi"target="_blank"> <i class="fab fa-github"></i></a>  </li>
+                    </ul>
+                </div>
+            
+            </div>
+            <div class="fullPage">
+                <div class="row-third">
+                
+                    <div class="one-one">
+                        
+                    </div>
+                
+                    <div class="one-two">
+                        
+                    </div>
+                    <div class="one-one">
+                        
+                    </div>
+                    
+                    <div class="one-two">
+                        
+                    </div> 
+                    <div class="one-one">
+                        
                     </div>
                 </div>
-            </div>
-
-        </div>
-        <div class="row">    
-            <h3> Currently available for work. Interested in hiring me or collaborating, please contact me <a href="#contact">here</a>.</h3>
-        </div>
-        <div class="row"> 
-            <h3> If you want to learn more, keep scrolling for projects, or check out my social media </h3>
-        </div>    
-        <div class="row">
-            <ul class="social">
-                <!-- <li> <a href="contact.html" ><i class="far fa-envelope"></i></a>  </li> -->
-                <li> <a href="https://twitter.com/lauralikespi" target="_blank"> <i class="fab fa-twitter"></i></a>  </li>
-                <li> <a href="https://www.instagram.com/lauralikespi/"target="_blank"> <i class="fab fa-instagram"></i></a>  </li>
-                <!-- ADD MEDIUM -->
-                <!-- ADD LINKEDIN -->
-                <!-- ADD GITHUB -->
-            </ul>
-        </div>
-       
-    </div>
-
-
-    <div class="fullPage">
-        <div class="row-third">
-        
-            <div class="one-one">
+                <div class="row-third">
                 
-            </div>
-        
-            <div class="one-two">
-                
-            </div>
-            <div class="one-one">
-                
-            </div>
+                    <div class="one-two">
+                        
+                    </div>
+                    
+                    <div class="one-one">
+                        
+                    </div>
+                    <div class="one-two">
+                        
+                    </div>
+                    
+                    <div class="one-one">
+                        
+                    </div> 
+                    <div class="one-two">
+                        
+                    </div>
+                </div>
+                <div class="row-third">
             
-            <div class="one-two">
+                    <div class="one-one">
+                        
+                    </div>
                 
-            </div> 
-            <div class="one-one">
-                
+                    <div class="one-two">
+                        
+                    </div>
+                    <div class="one-one">
+                        
+                    </div>
+                    
+                    <div class="one-two">
+                        
+                    </div> 
+                    <div class="one-one">
+                        
+                    </div>
+                </div>       
             </div>
         </div>
-        <div class="row-third">
-        
-            <div class="one-two">
-                
-            </div>
-            
-            <div class="one-one">
-                
-            </div>
-            <div class="one-two">
-                
-            </div>
-            
-            <div class="one-one">
-                
-            </div> 
-            <div class="one-two">
-                
-            </div>
-        </div>
-        <div class="row-third">
-    
-            <div class="one-one">
-                
-            </div>
-        
-            <div class="one-two">
-                
-            </div>
-            <div class="one-one">
-                
-            </div>
-            
-            <div class="one-two">
-                
-            </div> 
-            <div class="one-one">
-                
-            </div>
-        </div>       
     </div>
     <script src="js/handwriting.js"></script>
 </body>
