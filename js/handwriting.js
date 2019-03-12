@@ -10,9 +10,13 @@ function handwriting() {
   
 }
 
+var mid=document.getElementById('smallWords').style.height;
+document.getElementById('rightHandwriting').style.height=mid;
+document.getElementById('leftHandwriting').style.height=mid;
 
 setTimeout(handwriting, 5000);
 
-function testScreenSize() {
-    console.log("width: " + document.documentElement.clientWidth);
-}
+// Function below prints out the current width of the browser window
+// function testScreenSize() {
+//     console.log("width: " + document.documentElement.clientWidth);
+// }
