@@ -324,7 +324,7 @@ to {border-bottom-color: yellow;} */
   #mc_embed_signup{
 	background:#fff; 
 	clear:left; 
-	font:14px 'Thasadith', sans-serif; /* This is not the standard font */
+	font: 0.8em 'Thasadith', sans-serif; /* This is not the standard font */
 }
  #mc-embedded-subscribe-form input[type=checkbox]{
 	 display: inline; 
