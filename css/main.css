@@ -322,6 +322,7 @@ to {border-bottom-color: yellow;} */
   /* Mailchimp form */
   /* Standard CSS from mailchimp website */
   #mc_embed_signup{
+	  overflow: scroll;
 	background:#fff; 
 	clear:left; 
 	font: 0.8em 'Thasadith', sans-serif; /* This is not the standard font */
