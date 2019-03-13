@@ -93,6 +93,10 @@ html, body {
 .underline {
 	text-decoration: underline wavy blue;
 }
+.fullPage {
+	width: 95vw;
+	height: 100vh;
+}
 /* Scroll Snap */
 .holster {
 	display: flex;
@@ -300,9 +304,6 @@ to {border-bottom-color: yellow;} */
 	color: #6D9DC5;
 }
 /* Maps */
-.map{
-	text-align:right;
-}
 .gmap_canvas {
 	position: relative;
 	padding-bottom: 65.25%;
@@ -321,8 +322,7 @@ to {border-bottom-color: yellow;} */
 
   /* Mailchimp form */
   /* Standard CSS from mailchimp website */
-  #mc_embed_signup{
-	  overflow: scroll;
+#mc_embed_signup{
 	background:#fff; 
 	clear:left; 
 	font: 0.8em 'Thasadith', sans-serif; /* This is not the standard font */
@@ -432,6 +432,9 @@ to {border-bottom-color: yellow;} */
 	 }
 	 .indicates-required {
 		 text-align: right;
+	 }
+	 .gmap_canvas iframe {
+		margin: 0;
 	 }
   }
 
