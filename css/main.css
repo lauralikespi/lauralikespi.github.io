@@ -418,6 +418,9 @@ to {border-bottom-color: yellow;} */
 		width: 30vw;
 		padding: 0;
 	}
+	#mc_embed_signup {
+		overflow: scroll;
+	}
 	#mc_embed_signup .mc-field-group{
 		padding: 0 0;
 	}
