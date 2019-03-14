@@ -5,8 +5,8 @@ function handwriting() {
     x[i].style.display = "block";
   }
 
-  var y = document.getElementById("hiddenCircle");
-  y.setAttribute("style", "vertical-align: middle; height: 55px; width: 55px; border-radius: 50%; border: 1px solid #ffcccc; margin-left: auto; margin-right: auto; padding: 1px;");
+  // var y = document.getElementById("hiddenCircle");
+  // y.setAttribute("style", "vertical-align: middle; height: 55px; width: 55px; border-radius: 50%; border: 1px solid #ffcccc; margin-left: auto; margin-right: auto; padding: 1px;");
   
 }
 
