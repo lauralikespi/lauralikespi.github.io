@@ -93,10 +93,6 @@ html, body {
 .underline {
 	text-decoration: underline wavy blue;
 }
-.fullPage {
-	width: 95vw;
-	height: 100vh;
-}
 /* Scroll Snap */
 .holster {
 	display: flex;
