@@ -81,12 +81,12 @@ html, body {
  }
 
 /*  Setup */
-.handwriting {
+/*.handwriting {
 	font-family: 'Reenie Beanie', cursive;
  }
  .hidden{
 	display: none;
- }
+ }*/
  a {
 	text-decoration: none;
 	color: grey;
@@ -160,7 +160,7 @@ html, body {
 .circle {
 	vertical-align: middle;
 	position: relative;
-	width: 40%;		/* desired width */
+	width: 20%;		/* desired width */
 	border-radius: 50%;
 	background-color: #D3F8E2;
 	animation-name: backgroundChange;
@@ -178,9 +178,9 @@ html, body {
 .triangle-up {
 	height: 0;
 	width: 0;
-	border-left: 4vw solid transparent;
-	border-right: 4vw solid transparent;
-	border-bottom: 8vw solid #D3F8E2;
+	border-left: 2vw solid transparent;
+	border-right: 2vw solid transparent;
+	border-bottom: 4vw solid #D3F8E2;
 	animation-name: borderBottomChange;
 	animation-duration: 8s;
 	animation-delay: 2s;
@@ -193,9 +193,9 @@ html, body {
 	width: 0;
 	/* background-color: #555;
 	background-color: red; */
-	border-left: 4vw solid transparent;
-	border-right: 4vw solid transparent;
-	border-top: 8vw solid #822E81;
+	border-left: 2vw solid transparent;
+	border-right: 2vw solid transparent;
+	border-top: 4vw solid #822E81;
 	animation-name: borderTopChange;
 	animation-duration: 5s;
 	animation-delay: 3s;
