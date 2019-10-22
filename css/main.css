@@ -23,6 +23,7 @@ html, body {
 	display: flex;
 	align-items: flex-start;
 	min-height: 10vh;
+    text-align: left;
 }
 .half {
 	width:50%;
@@ -35,15 +36,16 @@ html, body {
 	align-items: center;
 	justify-content: center;
 }
-.heading {
-	height: 8vh;
-}
 .third {
 	width: 30%;
 	display: inline-block;
 	vertical-align: top;
 	padding-top: 0;
 }
+.quarter {
+	 width: 25%;
+	 display: inline-block;
+ }
 .two-third {
 	width: 65%;
 	display: inline-block;
@@ -51,7 +53,7 @@ html, body {
 	padding-top: 0;
 }
 .fifth {
-	 width: 25%;
+	 width: 20%;
 	 display: inline-block;
  }
  .four-fifth {
@@ -81,21 +83,9 @@ html, body {
  }
 
 /*  Setup */
-/*.handwriting {
-	font-family: 'Reenie Beanie', cursive;
- }
- .hidden{
-	display: none;
- }*/
- a {
+a {
 	text-decoration: none;
 	color: grey;
-}
-.reducedTopMargin {
-	margin-top: 0%;
-}
-.underline {
-	text-decoration: underline wavy blue;
 }
 .fullPage {
 	width: 95vw;
@@ -137,6 +127,9 @@ html, body {
 }
 
 /* Heading bar */
+/* .homepage {
+    background-color: #F5F5F5;
+}*/
 .title {
 	text-align: left;
 }
@@ -149,7 +142,7 @@ html, body {
 	align-items: center; 
 	display: flex;
 	justify-content: flex-end;
-	padding-right: 5%;
+	padding-right: 1vw;
 }
 .logo {
 	width: 5vw;
@@ -260,11 +253,32 @@ to {border-bottom-color: yellow;} */
 	100% {
 		border-bottom-color: #DEC5E3;
 	}
+} 
+/* Navigatiob bar */
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5vh 5vw;
+    float: right;
+}    
+.nav li {
+    display: inline;
+    padding-left: 2vw;
 }
+.nav li a {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 /*  Adding space under shapes */
 .words {
 	padding-top: 10vh;
 	flex-flow: wrap;
+    font-weight: bold;
+    color: gray;
+}
+.words p {
+    font-size: 1.3em;
 }
 .smallScreen .eigthth {
 	padding: 2vh 2vw;
@@ -315,88 +329,11 @@ to {border-bottom-color: yellow;} */
 #about a:hover, .faded {
 	color: #6D9DC5;
 }
-/* Maps */
-#international, #currently, #trampery{
-	padding: 2vh 0;
-}
-.gmap_canvas {
-	position: relative;
-	padding-bottom: 65.25%;
-	padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
-.gmap_canvas iframe {
-	margin: 0 0 5vh 5vw;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
 
-  /* Mailchimp form */
-  /* Standard CSS from mailchimp website */
-#mc_embed_signup{
-	background:#fff; 
-	clear:left; 
-	font: 0.8em 'Thasadith', sans-serif; /* This is not the standard font */
-}
- #mc-embedded-subscribe-form input[type=checkbox]{
-	 display: inline; 
-	 margin-right: 10px;
-}
-#mergeRow-gdpr {
-   margin-top: 20px;
-}
-#mergeRow-gdpr fieldset label {
-   font-weight: normal;
-}
-#mc-embedded-subscribe-form .mc_fieldset{
-   border:none;
-   min-height: 0px;
-   padding-bottom:0px;
-}
-/* Additional CSS to change layout of mailchimp form */
-.asterisk {
-   color: red;
-}
-#mce-REASON {
-   height: 5vh;
-}
-#mce-MESSAGE {
-   height: 20vh;
-}
-#mc_embed_signup .mc-field-group label {
-   display: inline-block;
-   width: 30%;
-}
-#mc_embed_signup .mc-field-group input {
-   display: inline-block;
-   width: 60%;
-   padding: 1vh 0;
-}
-#mc_embed_signup .indicates-required {
-   text-align: left;
-}
-#mc_embed_signup .mc-field-group select {
-   width: 50%;
-}
-#mc_embed_signup .mc-field-group #gdpr_32877, #mc_embed_signup .mc-field-group #gdpr_32889 {
-   width: 5%;
-}
-#mc_embed_signup .mc-field-group .checkbox {
-   width: 40%
-}
-#socialContact li{
-   padding: 1.5vw;
-}
-.content_gdpr {
-   padding-top: -5vh;
-}
+
+
+
+
 /* Smaller screens */
 @media only screen and (max-width: 700px) {
 	html, body {
@@ -414,7 +351,7 @@ to {border-bottom-color: yellow;} */
 	.smallScreen .maths p {
 		padding-left: 5vw;
 	}
-	.eighth{
+	.third{
 		width: 100%;
 		display: block;
 	}
@@ -430,29 +367,10 @@ to {border-bottom-color: yellow;} */
 	.skills ul {
 		margin: 0;
 		padding: 0.5vw;
+        list-style-type: none;
 	}
 	.skills li {
-		display: inline-block;
 		width: 30vw;
 		padding: 0;
 	}
-	#mc_embed_signup .mc-field-group{
-		padding: 0 0;
-	}
-	#mc_embed_signup .mc-field-group #gdpr_title{
-		width: 50%;
-	}
-	#mce-REASON {
-		height: 3vh;
-	 }
-	 #mce-MESSAGE {
-		height: 10vh;
-	 }
-	 .indicates-required {
-		 text-align: right;
-	 }
-	 .gmap_canvas iframe {
-		margin: 0;
-	 }
-  }
-
+}
