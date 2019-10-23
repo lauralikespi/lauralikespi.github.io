@@ -312,12 +312,14 @@ to {border-bottom-color: yellow;} */
  
  /*  About page */
 #about {
-	display: flex;
+	/* display: flex;
 	align-items: center;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: center; */
 	background-color: #72E1D1;
 	color: #3066BE;
+}
+.content {
 	padding-left: 1vw;
 }
 #about a {
