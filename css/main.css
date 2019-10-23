@@ -241,7 +241,7 @@ to {border-bottom-color: yellow;} */
     font-weight: bold;
     color: gray;
 }
-.words p {
+h3 {
     font-size: 1.3em;
 }
 
@@ -325,4 +325,17 @@ to {border-bottom-color: yellow;} */
 	margin-right: 4vw;
 	margin-left: 4vw;
 	border: black 1px solid;
+}
+
+#skills-technologist, #skills-researcher {
+	display: none;
+}
+
+button {
+	padding: 1%;
+	border-radius: 1%;
+	
+}
+#button-researcher:active {
+	background-color: green;
 }
