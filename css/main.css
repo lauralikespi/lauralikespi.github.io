@@ -148,7 +148,10 @@ a {
 	width: 5vw;
 	height: auto;
 }
-
+.shapes {
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
 /* Shapes and animations for Page 1 */
 .circle {
 	vertical-align: middle;
@@ -279,6 +282,10 @@ to {border-bottom-color: yellow;} */
 }
 .words p {
     font-size: 1.3em;
+}
+.word-img {
+	width: 50%;
+	height: auto;
 }
 .smallScreen .eigthth {
 	padding: 2vh 2vw;
