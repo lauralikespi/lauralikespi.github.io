@@ -373,4 +373,7 @@ button {
 	p, ul li {
 		font-size: 0.8em;
 	}
+	.projects {
+		width: 30%;
+	}
 }
