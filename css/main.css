@@ -8,11 +8,6 @@ html, body {
 	font-family: 'Thasadith', sans-serif;
 	margin-left: 0;
 }
-@media only screen and (min-width: 701px) {
-	.smallScreen {
-		display: none;
-	}
-}
 /*  Sections */
  .row {
 	width: 100%;
@@ -47,6 +42,9 @@ html, body {
 a {
 	text-decoration: none;
 	color: grey;
+}
+a:hover {
+	color: #C8C8C8;
 }
 .fullPage {
 	width: 100vw;
@@ -275,10 +273,81 @@ h3 {
 	align-items: flex-start;
 	padding-left: 10%;
 }
+/* Project Page */
+#projects {
+    background-color: #FFE3E3;
+    justify-content: left;
+    padding-left: 1vw;
+}
+/*  Grid for Project Page */
+.one-two {
+	height: 100%;
+	width: 50%;
+}
+.projects {
+    width: 50%;
+}
+.speaking {
+    width: 50%;
+}
+.speaking-image {
+    text-align: center;
+}
+.lists ul {
+    list-style: none;
+    width: 100%;
+    text-align: left;
+    padding-left: 1vw;
+}
+#leaving-no-one-behind {
+	width: 100vw;
+	padding: 1vmin;
+}
+.plan {
+	text-align: center;
+	padding: 5%;
+	border-radius: 5%;
+	margin-right: 10vw;
+	margin-left: 10vw;
+	border: black 1px solid;
+}
+.plan-detail {
+	padding: 3%;
+	border-radius: 5%;
+	margin-right: 4vw;
+	margin-left: 4vw;
+	border: black 1px solid;
+}
 
+#skills-technologist, #skills-researcher {
+	display: none;
+}
 
+button {
+	padding: 5%;
+	border-radius: 5%;
+	font-family: 'Thasadith', sans-serif;
+	background-color: #3066BE; 
+	color: #72E1D1;
+	font-weight: bold;
+}
+#button-researcher:hover, #button-educator:hover, #button-technologist:hover {
+	/* background-color: green; */
+	background-color: #A491D3!important;
+	color: #4C3B4D!important;
+}
+#button-educator {
+	background-color: #4C3B4D;
+	/* color: #FFEEDB; */
+	color: #ADA8B6;
+}
 
-
+/* Big screens only */
+@media only screen and (min-width: 701px) {
+	.smallScreen {
+		display: none;
+	}
+}
 /* Smaller screens */
 @media only screen and (max-width: 700px) {
 	html, body {
@@ -305,37 +374,4 @@ h3 {
 	p {
 		font-size: 0.8em;
 	}
-}
-
-#leaving-no-one-behind {
-	width: 100vw;
-	padding: 1vmin;
-}
-.plan {
-	text-align: center;
-	padding: 5%;
-	border-radius: 5%;
-	margin-right: 10vw;
-	margin-left: 10vw;
-	border: black 1px solid;
-}
-.plan-detail {
-	padding: 3%;
-	border-radius: 5%;
-	margin-right: 4vw;
-	margin-left: 4vw;
-	border: black 1px solid;
-}
-
-#skills-technologist, #skills-researcher {
-	display: none;
-}
-
-button {
-	padding: 1%;
-	border-radius: 1%;
-	
-}
-#button-researcher:active {
-	background-color: green;
 }
