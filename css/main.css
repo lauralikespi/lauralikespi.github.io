@@ -99,7 +99,6 @@ a:hover {
 	width: 100vw;
 	height: 100%;
 } */
-
 /* Heading bar */
 /* .homepage {
     background-color: #F5F5F5;
@@ -274,7 +273,7 @@ h3 {
 	padding-left: 10%;
 }
 /* Project Page */
-#projects {
+#projects, #projects2, #projects-small {
     background-color: #FFE3E3;
     justify-content: left;
     padding-left: 1vw;
@@ -371,7 +370,7 @@ button {
 	h3 {
 		font-size: 0.9em;
 	} 
-	p {
+	p, ul li {
 		font-size: 0.8em;
 	}
 }
