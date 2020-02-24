@@ -1,23 +1,15 @@
 .right-big {
   padding: 10px;
 }
-.sidenav {
-  padding-bottom: 10px;
-}  
-.graph {
-    width: 75%;
-    float: left;
-}
-.control {
-    width: 25%;
-    float: right;
+.control { 
+    padding: 10px;
     text-align: center;
 }
 .options {
     margin-left: 10px;
 }
 .slider {
-    width: 100%;
+    width: 75%;
 }
 table {
     text-align: center;
@@ -27,28 +19,10 @@ table {
     font-size: 1.6vh;
     vertical-align: center;
 }
-.left-small {
-    width: 20%;
-    float: left;
-}
-.middle-small {
-  width: 20%;
-  float: center;
-}
-.right {
-    width: 50%;
-    float: right;
-}
 .modebar{
   display: none !important;
 }
-button {
-  padding: 10px;
-  border-radius: 10%;
-  background-color: #20B2AA;
-  font-weight: bold;
-  color: #E6E6FA;
-}
 button:disabled {
   color: grey;
+  text-decoration: line-through;
 }

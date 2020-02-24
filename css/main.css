@@ -38,6 +38,18 @@ html, body {
 .left {
     text-align: left;
 }
+.centre {
+	text-align: center;
+}
+.three-quarters {
+	flex-basis: 75%; 
+}
+.quarter {
+	flex-basis: 25%; 
+}
+.equally-spaced {
+	justify-content: space-between;
+}
 /*  Setup */
 a {
 	text-decoration: none;
@@ -71,7 +83,6 @@ a:hover {
 	align-items: center;
 	justify-content: space-between;
 	flex-flow: column nowrap;
-	font-family: monospace;
 }
 
 .container {
@@ -323,11 +334,11 @@ h3 {
 }
 
 button {
-	padding: 5%;
+	padding: 2%;
 	border-radius: 5%;
 	font-family: 'Thasadith', sans-serif;
-	background-color: #3066BE; 
-	color: #72E1D1;
+	border-color: grey; 
+	background-color: white;
 	font-weight: bold;
 }
 #button-researcher:hover, #button-educator:hover, #button-technologist:hover {
