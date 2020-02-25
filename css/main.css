@@ -250,7 +250,7 @@ to {border-bottom-color: yellow;} */
     color: gray;
 }
 h3 {
-    font-size: 1.3em;
+    font-size: 1vw;
 }
 
  /*  About page */
@@ -455,13 +455,29 @@ button {
 		display: none;
 	}
 }
+@media only screen and (min-width: 1200px) and (max-width: 1500px){
+	h3 {
+		font-size: 1.2vw;
+	}
+	h3.circle-text div.circle-large{
+		top: 5vw;
+	}
+}
+@media only screen and (max-width: 1201px) {
+	h3 {
+		font-size: 1.3vw;
+	}
+	h3.circle-text div.circle-large{
+		top: 5vw;
+	}
+}
 /* Smaller screens */
 @media only screen and (max-width: 700px) {
 	html, body {
 		width: 100vw;
 	}
 	.words {
-		padding-top: 5vh;
+		padding-top: 6vh;
 	}
 	.bigScreen {
 		display: none;
@@ -484,4 +500,72 @@ button {
 	.projects {
 		width: 30%;
 	}
+
+	.circle-text {
+		vertical-align: middle;
+		position: relative;
+		width:95%;		/* desired width */
+		border-radius: 50%;
+		background-color: #D3F8E2;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	.circle-text:before{
+		content: "";
+		display: block;
+		padding: 50%; 	
+	}
+	
+	
+	h3.circle-text div.circle-large{
+		position: absolute;
+		top: 17vw;
+	}
+	.flexOne {
+		flex-basis: 35%;
+	}
+	.flexTwo {
+		flex-basis: 65%;
+	}
+	.main-nav {
+		list-style-type: none;
+		display: none;
+	}
+	.main-nav li {
+		text-align: center;
+		margin: 2vh auto;
+	}
+	.navbar-toggle {
+		position: absolute;
+		right: 5%;
+		cursor: pointer;
+		color: black;
+	}
+	
+	.active {
+		display: block;
+	}
+}
+
+
+
+
+
+@media only screen and (min-width: 1025px) {
+	.navbar {
+	    display: none;
+	}
+
+	.main-nav {
+	    display: none;
+
+	}
+
+
+
+	.navbar-toggle {
+	    display: none;
+	}
+
 }
