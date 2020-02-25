@@ -331,13 +331,13 @@ h3.circle-text div.circle-large{
 	border-radius: 50%;
 	filter: grayscale(0.6);
 }
-#ed-img{
+.ed-img{
 	border: solid 5px #9F87AF;
 }
-#tech-img{
+.tech-img{
 	border: solid 5px #A9DEF9;
 }
-#res-img{
+.res-img{
 	border: solid 5px #DEC5E3;
 }
 .quarter {
