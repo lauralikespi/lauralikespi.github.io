@@ -542,10 +542,7 @@ button {
 		cursor: pointer;
 		color: black;
 	}
-	
-	.active {
-		display: block;
-	}
+
 }
 
 
@@ -568,4 +565,8 @@ button {
 	    display: none;
 	}
 
+}
+
+.active {
+	display: block;
 }
