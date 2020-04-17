@@ -2,7 +2,7 @@
 // Get all the values needed for the simulation (these are the default varaibles from the inputs)
 var n = document.getElementById("boids").value; // number of boids
 // var r = document.getElementById("radius").value;  // radius of neighbourhood
-var v = document.getElementById("velocity").value; // velocity of boids
+// var v = document.getElementById("velocity").value; // velocity of boids
 
 // var weight_ali = document.getElementById("alignment").value ; // weight of alignment
 // var weight_coh = document.getElementById("cohesion").value; // weight of cohesion
@@ -14,7 +14,7 @@ var h = 800; // height of area
 var sep_cof = 100; // separation coefficient
 
 // display variables on website
-// document.getElementById("boidsOutput").innerHTML = n; // number of boids
+document.getElementById("boidsOutput").innerHTML = n; // number of boids
 // document.getElementById("radiusOutput").innerHTML = r;  // radius of neighbour
 // document.getElementById("aliOutput").innerHTML = Math.round(weight_ali*100) + "%" ; // weight of alignment as percentage
 // document.getElementById("cohOutput").innerHTML = Math.round(weight_coh*100) + "%" ; // weight of cohesion as percentage
@@ -123,10 +123,10 @@ function alignment(agent,neighbours,boids){
 
 function updateBoid(agent,boids){
     var neighbours = neighbourhood(n,agent,boids);
-    
+    const v = document.getElementById("velocity").value;
     
     if (neighbours.length > 0){
-        var ang_coh, ang_sep, ang_ali,new_x, new_y = 0;
+        var ang_coh, ang_sep, ang_ali, new_x, new_y= 0;
         // var new_x, new_y;
         // var mag_coh, ang_coh, mag_sep, ang_sep, ali_ang = 0;
 
@@ -136,17 +136,17 @@ function updateBoid(agent,boids){
         ang_sep = separation(agent,neighbours,boids,sep_cof)[1];
         ang_ali = alignment(agent,neighbours,boids);
 
-        weight_ali = document.getElementById("alignment").value ;
-        weight_coh = document.getElementById("cohesion").value;
-        weight_sep = document.getElementById("separation").value;
-        v = document.getElementById("velocity").value; 
+        const weight_ali = document.getElementById("alignment").value ;
+        const weight_coh = document.getElementById("cohesion").value;
+        const weight_sep = document.getElementById("separation").value;
+        
 
         document.getElementById("sepOutput").innerHTML = Math.round(weight_sep*100) + "%"; 
         document.getElementById("aliOutput").innerHTML = Math.round(weight_ali*100) + "%";
         document.getElementById("cohOutput").innerHTML = Math.round(weight_coh*100) + "%"; 
         document.getElementById("velOutput").innerHTML = v;
  
-        new_ang = weight_coh*ang_coh - weight_sep*ang_sep + weight_ali*ang_ali;
+        const new_ang = weight_coh*ang_coh - weight_sep*ang_sep + weight_ali*ang_ali;
 
         new_x = boids[agent].x + v*Math.cos(new_ang);
         new_y = boids[agent].y + v*Math.sin(new_ang);
@@ -210,7 +210,7 @@ function updateBoid(agent,boids){
 
 function updateSim(n,boids){
     // var n = document.getElementById("boidsOutput").innerHTML;
-    var new_n = document.getElementById("boids").value;
+    const new_n = document.getElementById("boids").value;
     switch(new_n){
         case n:
             document.getElementById("updateNeeded").innerHTML = ""; 
