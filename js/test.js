@@ -122,7 +122,7 @@ function alignment(agent,neighbours,boids){
 }
 
 function updateBoid(agent,boids){
-    var neighbours = neighbourhood(n,agent,boids);
+    var neighbours = neighbourhood(boids,n);
     const v = document.getElementById("velocity").value;
     
     if (neighbours.length > 0){
@@ -157,23 +157,6 @@ function updateBoid(agent,boids){
         new_x = boids[agent].x - v * (Math.round(Math.random()) * 2 - 1) * Math.random(); 
         new_y = boids[agent].y - v * (Math.round(Math.random()) * 2 - 1) * Math.random(); 
     }
-
-    // if (new_x > w){
-    //     new_x = (new_x - w) - w;
-    // }
-
-    // if (new_y > h){
-    //     new_y = (new_y - h) - h;
-    // }
-
-    // if (new_x < - w){
-    //     new_x = (new_x + w) + w;
-    // }
-
-    // if (new_y < - h){
-    //     new_y = (new_y + h) + h;
-    // }
-
 
     switch(true){
         case new_x > w:
