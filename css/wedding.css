@@ -59,25 +59,14 @@ a:visited {
 a:hover {
 	text-decoration: underline;
 }
-.row {
-    display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-.row > * {
-	flex: 1 100%;
-  }
 .main-col {
     display: flex;
-    flex-direction: column;
-    justify-content: stretch; 
+	flex-direction: column;
+    justify-content: center; 
     min-height: 100%;
     background-color: rgba(255, 255, 255, 0);  
 }
-.main-col > * {
-	flex: 1 100%;
-  }
+
 #nav {
     text-align: right;
 }
@@ -109,7 +98,7 @@ footer {
     margin: auto;
 }
 #rings {
-    width: 30%;
+    width: 20%;
     margin: auto;
 }
 h2 {
@@ -140,3 +129,46 @@ ul li {
 	background-color: #C4D7F2;
 	left: 20%;
   }
+
+  @media only screen and (max-width: 750px) {
+	#mainTitle {
+		font-size: 3.5em;
+	} 
+	h2 {
+		font-size: 1.7em;
+	} 
+	h4 {
+		font-size: 1.2em;
+    } 
+
+}
+
+@media only screen and (max-width: 1023px) {
+	#map, #mainPhoto, #calendar {
+		width: 50%;
+		height: 30vh;
+		left: 25vw;
+	}
+	.small-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+    .small-col-rev {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center; 
+    }
+}
+
+@media only screen and (min-width: 1023px) {
+	.big-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+	.big-row > * {
+		flex: 1 100%;
+	}
+}

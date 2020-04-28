@@ -5,30 +5,24 @@ var n = 100; //document.getElementById("boids").value; // number of boids
 // variables that don't change
 var w = 800; // width of area
 var h = 800; // height of area
-var sep_cof = 100; // separation coefficient
 
 // display variables on website
 document.getElementById("boidsOutput").innerHTML = n; // number of boids
-// document.getElementById("radiusOutput").innerHTML = r;  // radius of neighbour
-// document.getElementById("aliOutput").innerHTML = Math.round(weight_ali*100) + "%" ; // weight of alignment as percentage
-// document.getElementById("cohOutput").innerHTML = Math.round(weight_coh*100) + "%" ; // weight of cohesion as percentage
-// document.getElementById("sepOutput").innerHTML = Math.round(weight_sep*100) + "%" ; // weight of separation as percentage
-// document.getElementById("velOutput").innerHTML = v; // velocity of boids
 
-
-// var r = 100;
 // Empty array to hold the boids
 var boids = []; // array of all the n boids in the simulation
 
+
+// Class Boid - creates a boid with three properties:
+// - x and y co-ordinates (set to a random value inside the h * w grid)
+// - theta (an angle of direction)
 function Boid(){
     this.x = w * (Math.round(Math.random()) * 2 - 1) * Math.random(); 
     this.y = h * (Math.round(Math.random()) * 2 - 1) * Math.random(); 
     this.theta = 360 * Math.random() * Math.PI / 180; 
 }
 
-
-
-// Add a Boid object for each boid in the array
+// Iniatialising the Boids with a loop to add a Boid object for each boid in the array
 for (i = 0 ; i < n ; i++){
     boids[i] = new Boid();
 }
@@ -45,6 +39,7 @@ function plotBoids(boids){
     return [x_plot, y_plot];
 }
 
+// Create a distance matrix for the Euclidean distances between boids
 function distance_matrix(boids){
     var distance = [];
     for (i = 0 ; i < n ; i++){
@@ -60,6 +55,7 @@ function distance_matrix(boids){
     }
     return distance;
 }
+
 
 
 function neighbourhood(boids){
