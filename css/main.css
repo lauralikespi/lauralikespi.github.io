@@ -364,10 +364,9 @@ h3.circle-text div.circle-large{
 .speaking-image {
     text-align: center;
 }
-.lists ul {
+ul {
     list-style: none;
     width: 100%;
-    text-align: left;
     padding-left: 1vw;
 }
 #leaving-no-one-behind {
